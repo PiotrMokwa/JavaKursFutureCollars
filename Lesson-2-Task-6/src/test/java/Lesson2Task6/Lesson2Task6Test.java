@@ -6,10 +6,10 @@ public class Lesson2Task6Test {
     public void shouldWeekDayCheckMonday() {
         //given
         int mon = 1;
-        //when
-        String result = Lesson2Task6.weekDayCheck(mon);
-        //then
-        Assertions.assertSame("Monday", result);
+            //when
+            String result = Lesson2Task6.weekDayCheck(mon);
+            //then
+            Assertions.assertSame("Monday", result);
     }
     @Test
     public void shouldWeekDayCheckTuesday() {
@@ -64,6 +64,8 @@ public class Lesson2Task6Test {
         String result = Lesson2Task6.weekDayCheck(sun);
         //then
         Assertions.assertSame("Weekend", result);
+
+
     }
     @Test
     public void shouldWeekDayCheckError() {
