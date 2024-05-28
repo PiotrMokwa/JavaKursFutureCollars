@@ -58,14 +58,12 @@ public class Lesson2Task6Test {
     }
     @Test
     public void shouldWeekDayCheckSunday() {
-        //given
+        //given New commit
         int sun = 7;
         //when
         String result = Lesson2Task6.weekDayCheck(sun);
         //then
         Assertions.assertSame("Weekend", result);
-
-
     }
     @Test
     public void shouldWeekDayCheckError() {

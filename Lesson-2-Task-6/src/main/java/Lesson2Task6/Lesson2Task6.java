@@ -1,6 +1,7 @@
 package Lesson2Task6;
 public class Lesson2Task6 {
     public static String weekDayCheck(int weekDayNumber){
+       //New commit
         switch (weekDayNumber){
             case 1:
                 return "Monday";
