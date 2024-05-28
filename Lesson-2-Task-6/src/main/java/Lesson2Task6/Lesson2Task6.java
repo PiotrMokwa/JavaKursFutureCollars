@@ -1,11 +1,6 @@
 package Lesson2Task6;
-
 public class Lesson2Task6 {
-
     public static String weekDayCheck(int weekDayNumber){
-
-
-
         switch (weekDayNumber){
             case 1:
                 return "Monday";
@@ -22,14 +17,6 @@ public class Lesson2Task6 {
                 return "Weekend";
             default:
                 return "There is no such a day!";
-
         }
-
     }
-
-
-public static void main(String[] arg){
-
-}
-
 }

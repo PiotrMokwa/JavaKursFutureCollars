@@ -1,44 +1,79 @@
 package Lesson2Task6;
-
-//Lekcja 2 - mvn, junit - Zadanie 6 - Dni tygodnia
-//        Zaimplementuj metodę, która na podstawie argumentu wejściowego
-//        (liczba całkowita) zwróci nazwę dnia tygodnia.
-//        Jeżeli argument wejściowy jest równy
-//●     1 - 5 wówczas metoda powinna zwrócić dzień tygodnia, np. “Monday”,
-//        ●     6 lub 7 metoda powinna zwrócić “Weekend”
-//        ●     >7 metoda zwraca komunikat “There is no such a day!”
-//
-//
-//
-//Do powstałego kodu należy również dopisać testy jednostkowe.
-
-
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
 public class Lesson2Task6Test {
-
     @Test
-    public void shouldWeekDayCheck() {
-
+    public void shouldWeekDayCheckMonday() {
         //given
-        String[] weekDays = {"Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Weekend", "Weekend", "There is no such a day!"};
-        /* int mon = 1;
-        int tue = 2;
-        int Wed = 3;
-        int thu = 4;
-        int fir = 5;
-        int sat = 6;
-        int sun = 7;
-        int autOfWeek = 8;
-        */
-        for (int i = 1; i < 8; i++) {
+        int mon = 1;
             //when
-            String result = Lesson2Task6.weekDayCheck(i);
+            String result = Lesson2Task6.weekDayCheck(mon);
             //then
-            Assertions.assertSame(weekDays[i-1], result);
-        }
+            Assertions.assertSame("Monday", result);
+    }
+    @Test
+    public void shouldWeekDayCheckTuesday() {
+        //given
+        int tue = 2;
+        //when
+        String result = Lesson2Task6.weekDayCheck(tue);
+        //then
+        Assertions.assertSame("Tuesday", result);
+    }
+    @Test
+    public void shouldWeekDayCheckWednesday() {
+        //given
+        int wed = 3;
+        //when
+        String result = Lesson2Task6.weekDayCheck(wed);
+        //then
+        Assertions.assertSame("Wednesday", result);
+    }
+    @Test
+    public void shouldWeekDayCheckThursday() {
+        //given
+        int thu = 4;
+        //when
+        String result = Lesson2Task6.weekDayCheck(thu);
+        //then
+        Assertions.assertSame("Thursday", result);
+    }
+    @Test
+    public void shouldWeekDayCheckFriday() {
+        //given
+        int fri = 5;
+        //when
+        String result = Lesson2Task6.weekDayCheck(fri);
+        //then
+        Assertions.assertSame("Friday", result);
+    }
+    @Test
+    public void shouldWeekDayCheckSaturday() {
+        //given
+        int sat = 6;
+        //when
+        String result = Lesson2Task6.weekDayCheck(sat);
+        //then
+        Assertions.assertSame("Weekend", result);
+    }
+    @Test
+    public void shouldWeekDayCheckSunday() {
+        //given
+        int sun = 7;
+        //when
+        String result = Lesson2Task6.weekDayCheck(sun);
+        //then
+        Assertions.assertSame("Weekend", result);
+
 
     }
-
+    @Test
+    public void shouldWeekDayCheckError() {
+        //given
+        int autOfWeek = 8;
+        //when
+        String result = Lesson2Task6.weekDayCheck(autOfWeek);
+        //then
+        Assertions.assertSame("There is no such a day!", result);
+    }
 }
