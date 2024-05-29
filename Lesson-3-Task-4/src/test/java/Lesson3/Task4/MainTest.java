@@ -7,9 +7,8 @@ public class MainTest {
     public void shouldConvertMinutesToSeconds(){
     //given
     int minutesTested = 60;
-    Conversion minutes = new Conversion();
     //when
-    int  result= minutes.convertMinutesToSeconds(minutesTested);
+    int  result= Conversion.convertMinutesToSeconds(minutesTested);
     //then
     Assertions.assertEquals(3600,result);
 }
