@@ -1,13 +1,15 @@
 package Lesson3.Task2;
-
 public class Movie {
     protected String title;
-    protected String DirectorName;
-    protected String DirectorLastName;
+    protected String directorName;
+    protected String directorLastName;
     protected int movieTime;
     protected int productionYear;
-    protected Movie(int movieTime,int productionYear) {
-        this.movieTime = movieTime;
-        this.productionYear = productionYear;
+    protected Movie(String title, String directorName, String directorLastName, int movieTime, int productionYear){
+       this.title = title;
+       this.directorName = directorName;
+       this.directorLastName = directorLastName;
+       this.movieTime = movieTime;
+       this.productionYear = productionYear;
     }
 }
