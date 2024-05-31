@@ -14,10 +14,6 @@ public class Circle extends Shape {
         return (double) Math.round((Math.PI * Math.pow(r, 2)) * 100) /100;
     }
     @Override
-    protected double getPerimeter(int r) {
-        return (double) Math.round((2 * Math.PI * r) * 100) /100;
-    }
-    @Override
     protected double getPerimeter(int a, int b) {
         return 0;
     }

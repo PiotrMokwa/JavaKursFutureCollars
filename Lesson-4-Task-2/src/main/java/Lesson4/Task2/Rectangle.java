@@ -14,10 +14,6 @@ public class Rectangle extends Shape {
         return 0;
     }
     @Override
-    protected double getPerimeter(int r) {
-        return 0;
-    }
-    @Override
     protected double getPerimeter(int a, int b) {
         return 2 * a + 2 * b;
     }
