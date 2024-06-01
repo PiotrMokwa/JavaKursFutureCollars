@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 public class CircleTest {
     @Test
-    public void getAreaCircleTest(){
+    public void shouldGetAreaCircleTest(){
 //        given
         int r = 2;
 //        when
@@ -13,7 +13,7 @@ public class CircleTest {
         Assertions.assertEquals(12.57,result);
     }
     @Test
-    public void getPerimeterCircleTest(){
+    public void shouldGetPerimeterCircleTest(){
 //        given
         int r = 3;
 //        when
