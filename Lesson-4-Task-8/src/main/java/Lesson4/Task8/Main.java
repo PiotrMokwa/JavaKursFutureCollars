@@ -4,7 +4,8 @@ public class Main {
         Person john = new Person("John","Kowalski", 40,1.87f);
         Person joe = new Person("Joe","Kowalski", 40,1.87f);
         Person mark = john;
-        john.testEqualsAndHashCode(mark);
-        john.testEqualsAndHashCode(joe);
+        System.out.println(john.equals(joe));
+        System.out.println(john.equals(mark));
+        System.out.println(john.hashCode());
     }
 }

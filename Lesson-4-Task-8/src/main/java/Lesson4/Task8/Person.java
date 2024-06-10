@@ -1,24 +1,25 @@
 package Lesson4.Task8;
+import java.util.Objects;
 public class Person {
     private String name;
     private String lastName;
     private int age;
     private float hight;
-    private int counter = 0;
      public Person(String name, String lastName, int age, float hight){
-        this.name = name;
+         this.name = name;
+         this.lastName = lastName;
+         this.age = age;
+         this.hight = hight;
      }
-     public void testEqualsAndHashCode( Person o2) {
-         counter++;
-         System.out.println("Test " + counter);
-         System.out.println(this.name + " code: "
-                 + this.hashCode());
-         System.out.println(o2.name + " code: "
-                 + o2.hashCode());
-         System.out.println(this.name
-                 + " and "
-                 + o2.name
-                 + " is the same: "
-                 + this.equals(o2));
-     }
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return age == person.age && Float.compare(hight, person.hight) == 0 && Objects.equals(name, person.name) && Objects.equals(lastName, person.lastName);
+    }
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, lastName, age, hight);
+    }
 }
