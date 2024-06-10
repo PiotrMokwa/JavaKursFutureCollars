@@ -7,8 +7,8 @@ public class CircleTest {
     //given
     int r =2;
     // when
-    Circle circle = new Circle();
-    double result = circle.getArea(r);
+    Circle circle = new Circle(r);
+    double result = circle.getArea();
     //then
         Assertions.assertEquals(12.57,result);
     }
@@ -17,8 +17,8 @@ public class CircleTest {
         //given
         int r =2;
         // when
-        Circle circle = new Circle();
-        double result = circle.getArea(r);
+        Circle circle = new Circle(r);
+        double result = circle.getArea();
         //then
         Assertions.assertEquals(12.57,result);
     }

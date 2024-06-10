@@ -8,8 +8,8 @@ public class SquareTest {
         int a = 2;
         int b = 2;
         //when
-        Rectangle rectangleTest = new Rectangle();
-        double result = rectangleTest.getArea(a,b);
+        Rectangle rectangleTest = new Rectangle(a,b);
+        double result = rectangleTest.getArea();
         //then
         Assertions.assertEquals(4,result);
     }
@@ -19,8 +19,8 @@ public class SquareTest {
         int a = 2;
         int b = 2;
         //when
-        Rectangle rectangleTest = new Rectangle();
-        double result = rectangleTest.getPerimeter(a,b);
+        Rectangle rectangleTest = new Rectangle(a,b);
+        double result = rectangleTest.getPerimeter();
         //then
         Assertions.assertEquals(8,result);
     }

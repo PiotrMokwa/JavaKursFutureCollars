@@ -1,20 +1,18 @@
 package Lesson4.Task2;
 import Lesson4.Shape;
-public class Rectangle extends Shape {
-    @Override
-    protected double getArea(int a,int b) {
+    public class Rectangle extends Shape {
+      double a;
+      double b;
+     public Rectangle(double sideA, double sideB){
+        this.a = sideA;
+        this.b = sideB;
+     }
+     @Override
+     public double getArea() {
         return a * b;
     }
-    @Override
-    protected double getPerimeter(int a, int b, int c) {
-        return 0;
-    }
-    @Override
-    protected double getArea(int r) {
-        return 0;
-    }
-    @Override
-    protected double getPerimeter(int a, int b) {
+     @Override
+     public double getPerimeter() {
         return 2 * a + 2 * b;
     }
 }

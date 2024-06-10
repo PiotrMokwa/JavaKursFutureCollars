@@ -1,20 +1,16 @@
 package Lesson4.Task2;
 import Lesson4.Shape;
 public class Circle extends Shape {
-    @Override
-    protected double getArea(int a, int b) {
-        return 0;
+    double r;
+     Circle(double r){
+        this.r = r;
     }
     @Override
-    protected double getPerimeter(int a, int b, int c) {
-        return 0;
-    }
-    @Override
-    protected double getArea(int r) {
+    public double getArea() {
         return (double) Math.round((Math.PI * Math.pow(r, 2)) * 100) /100;
     }
     @Override
-    protected double getPerimeter(int a, int b) {
-        return 0;
+    public double getPerimeter() {
+        return (double) Math.round(2 * Math.PI * r * 100) /100 ;
     }
 }

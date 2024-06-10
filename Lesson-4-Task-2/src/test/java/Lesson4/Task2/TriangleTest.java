@@ -5,11 +5,13 @@ public class TriangleTest {
     @Test
     public void getAreaTestTriangle(){
     //given
-     int a = 2;
-     int h = 2;
+        int a = 2;
+        int b = 2;
+        int c = 3;
+        int h = 2;
     //when
-    Triangle triangle = new Triangle();
-    double result =triangle.getArea(a,h);
+    Triangle triangle = new Triangle(a,b,c,h);
+    double result =triangle.getArea();
     //then
     Assertions.assertEquals(2,result);
     }
@@ -17,11 +19,12 @@ public class TriangleTest {
     public void getPerimeterTestTriangle(){
         //given
         int a = 2;
-        int h = 2;
+        int b = 2;
         int c = 3;
+        int h = 2;
         //when
-        Triangle triangle = new Triangle();
-        double result =triangle.getPerimeter(a,h,c);
+        Triangle triangle = new Triangle(a,b,c,h);
+        double result =triangle.getPerimeter();
         //then
         Assertions.assertEquals(7,result);
     }
