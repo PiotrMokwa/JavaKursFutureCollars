@@ -18,7 +18,7 @@ public class TextOperations {
              }
             return true;
         }
-        int textLength(){
+        int getTextLength(){
             return textData.length();
         }
 }

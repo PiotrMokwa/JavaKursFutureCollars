@@ -7,7 +7,7 @@ package Lesson5.Task1;
                 System.out.println(text.isPolyandry());
             }
             if(text.hasChars()){
-             System.out.println(text.textLength());
+             System.out.println(text.getTextLength());
             }
     }
 }
