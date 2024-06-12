@@ -4,7 +4,7 @@ public class TextOperations {
         TextOperations(String textData){
             this.textData = textData;
         }
-        boolean hasChars(){
+        boolean isEmpty(){
             return this.textData != null;
         }
         boolean isPolyandry() {
