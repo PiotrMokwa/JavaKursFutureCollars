@@ -3,23 +3,23 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 public class RectangleTest {
     @Test
-    public void getPerimeterRectangleTest(){
+    public void shouldPerimeterRectangle(){
         //given
         int a = 2;
         int b = 4;
-        //when
         Rectangle rectangleTest = new Rectangle(a,b);
+        //when
         double result = rectangleTest.getPerimeter();
         //then
         Assertions.assertEquals(12,result);
     }
     @Test
-    public void getAreaRectangleTest(){
+    public void shouldAreaRectangle(){
         //given
         int a = 2;
         int b = 4;
-        //when
         Rectangle rectangleTest = new Rectangle(a,b);
+        //when
         double result = rectangleTest.getArea();
         //then
         Assertions.assertEquals(8,result);

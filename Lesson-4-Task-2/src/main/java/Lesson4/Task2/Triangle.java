@@ -1,19 +1,19 @@
 package Lesson4.Task2;
 import Lesson4.Shape;
 public class Triangle extends Shape {
-     int a;
-     int h;
-     int b;
-     int c;
+     private int a;
+     private int height;
+     private int b;
+     private int c;
     Triangle(int sideA, int sideB, int sideC, int height){
         this.a = sideA;
-        this.h = height;
+        this.height = height;
         this.b = sideB;
         this.c = sideC;
     }
     @Override
     public double getArea() {
-        return (double) (a * h) / 2;
+        return (double) (a * height) / 2;
     }
     @Override
     public double getPerimeter() {
