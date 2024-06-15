@@ -6,6 +6,5 @@ public class Main {
         System.out.println(calculator.getDivide());
         System.out.println(calculator.getSubtract());
         System.out.println(calculator.getMultiply());
-
     }
 }
