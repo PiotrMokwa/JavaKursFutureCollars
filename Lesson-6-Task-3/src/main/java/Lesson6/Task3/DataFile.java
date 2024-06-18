@@ -4,7 +4,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class DataFile {
-    private Path path;
+    private final Path path;
     private String textInFile;
         public DataFile(String path){
             this.path = Path.of(path);
@@ -18,7 +18,7 @@ public class DataFile {
         }
         public void printCharsNumber(){
             System.out.println("Chars number in file "
-                    + this.path + ": " +
+                    + this.path + ": "
                     + this.textInFile.length());
         }
 }
