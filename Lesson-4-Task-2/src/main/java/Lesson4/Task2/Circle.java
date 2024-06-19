@@ -2,7 +2,7 @@ package Lesson4.Task2;
 import Lesson4.Shape;
 public class Circle extends Shape {
    private double radius;
-     Circle(double radius){
+    public Circle(double radius){
         this.radius = radius;
     }
     @Override

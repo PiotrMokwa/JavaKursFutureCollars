@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 public class RectangleTest {
     @Test
-    public void shouldPerimeterRectangle(){
+    public void shouldGetPerimeterRectangle(){
         //given
         int a = 2;
         int b = 4;
@@ -14,7 +14,7 @@ public class RectangleTest {
         Assertions.assertEquals(12,result);
     }
     @Test
-    public void shouldAreaRectangle(){
+    public void shouldGetAreaRectangle(){
         //given
         int a = 2;
         int b = 4;

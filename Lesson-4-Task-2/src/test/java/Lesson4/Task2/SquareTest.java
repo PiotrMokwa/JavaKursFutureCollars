@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 public class SquareTest {
     @Test
-    public void shouldAreaSquare(){
+    public void shouldGetAreaSquare(){
         //given
         int a = 2;
         int b = 2;
@@ -14,7 +14,7 @@ public class SquareTest {
         Assertions.assertEquals(4,result);
     }
     @Test
-    public void shouldPerimeterSquare(){
+    public void shouldGetPerimeterSquare(){
         //given
         int a = 2;
         int b = 2;

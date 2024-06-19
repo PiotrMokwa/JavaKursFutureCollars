@@ -3,7 +3,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 public class TriangleTest {
     @Test
-    public void shouldAreaTriangle(){
+    public void shouldGetAreaTriangle(){
         //given
         int a = 2;
         int b = 2;
@@ -16,7 +16,7 @@ public class TriangleTest {
         Assertions.assertEquals(2,result);
       }
     @Test
-    public void shouldPerimeterTriangle(){
+    public void shouldGetPerimeterTriangle(){
         //given
         int a = 2;
         int b = 2;
