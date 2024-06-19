@@ -4,32 +4,30 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class DataFile {
-    private String filePath;
-    private String fileText;
-    private String[] fileTextArray;
-        public DataFile(String filePath){
-        this.filePath = filePath;
+    public DataFile(){}
+    public String getReadFile(String filePath){
+        String fileText = "";
+        try {
+            fileText = Files.readString(Path.of(filePath));
+        } catch(IOException e){
+            e.printStackTrace();
         }
-        public void read(){
-            try {
-                fileText = Files.readString(Path.of(filePath));
-            } catch(IOException e){
-                e.printStackTrace();
-            }
-        }
-        public void printOddLines() {
+        return fileText;
+    }
+        public void printOddLines(String fileText) {
+          String[] fileTextArray;
            if(fileText == null){
                System.out.println("File wasn't read");
            }else {
-               this.fileTextArray = this.fileText.split(System.lineSeparator());
+               fileTextArray = fileText.split(System.lineSeparator());
                int arrayIndex = 0;
-               for (String text : this.fileTextArray) {
-                   boolean odd = !(arrayIndex % 2 == 0);
-                   if (odd) {
-                       System.out.println(fileTextArray[arrayIndex]);
+                   for (String text : fileTextArray) {
+                       boolean odd = !(arrayIndex % 2 == 0);
+                       if (odd) {
+                           System.out.println(fileTextArray[arrayIndex]);
+                       }
+                       arrayIndex++;
                    }
-                   arrayIndex++;
-               }
            }
         }
 }
