@@ -5,20 +5,19 @@ import java.nio.file.Path;
 import java.util.Objects;
 
 public class DataFile {
-   private final Path filePath;
-   private String readedText;
-     public  DataFile(String path) {
-        this.filePath = Path.of(path);
+     public DataFile() {
      }
-      public void read(){
-        try {
-            this.readedText = Files.readString(this.filePath);
-        }catch (IOException e){
-           System.out.println(e);
-          e.printStackTrace();
-        }
-      }
-      public void display(){
-          System.out.println(Objects.requireNonNullElse(this.readedText, "File wasn't read"));
-      }
+     public String getReadText(String path) {
+         String readedText ="";
+         try {
+            readedText = Files.readString(Path.of(path));
+         }catch (IOException e){
+             System.out.println(e);
+             e.printStackTrace();
+         }
+         return readedText;
+     }
+     public void display(String readedText){
+          System.out.println(Objects.requireNonNullElse(readedText, "File wasn't read"));
+     }
 }
