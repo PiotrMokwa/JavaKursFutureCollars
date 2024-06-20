@@ -16,10 +16,14 @@ public class DataFile {
         }
         return textInFile;
     }
-    public void printTextRevert(String textInFile) {
+    public char[] getTextRevert(String textInFile) {
         char[] textArray = textInFile.toCharArray();
-        for (int i = textArray.length - 1; i >= 0; i--) {
-            System.out.print(textArray[i]);
+        char[] textRevertArray = new char[textArray.length];
+        int forvardCounter = 0;
+        for (int backwardsCounter = textArray.length - 1; backwardsCounter >= 0; backwardsCounter--) {
+            textRevertArray[forvardCounter] = textArray[backwardsCounter];
+            forvardCounter++;
         }
+        return textRevertArray;
     }
 }
