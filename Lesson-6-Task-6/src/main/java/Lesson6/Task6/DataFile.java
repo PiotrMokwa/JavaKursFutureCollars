@@ -5,7 +5,7 @@ import java.nio.file.Path;
 
 public class DataFile {
     public String textUpperCase;
-        public DataFile(){};
+        public DataFile(){}
         public String read(String filePath){
         String textInFile = "";
             try {
