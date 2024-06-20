@@ -1,24 +1,25 @@
 package Lesson6.Task5;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+
 public class DataFile {
-   private final Path filePath;
-   public String textInFile;
-    public DataFile(String filePath){
-        this.filePath = Path.of(filePath);
+    public DataFile() {
     }
-    public void read(){
+    public String read(String filePath) {
+        String textInFile = "";
         try {
-           this.textInFile = Files.readString(this.filePath);
-        }catch (IOException e){
+            textInFile = Files.readString(Path.of(filePath));
+        } catch (IOException e) {
             e.printStackTrace();
         }
+        return textInFile;
     }
-    public void getTextRevert(){
-        char[] textArray = this.textInFile.toCharArray();
-          for(int i = textArray.length - 1; i >= 0 ; i-- ) {
+    public void printTextRevert(String textInFile) {
+        char[] textArray = textInFile.toCharArray();
+        for (int i = textArray.length - 1; i >= 0; i--) {
             System.out.print(textArray[i]);
-          }
+        }
     }
 }
