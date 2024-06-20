@@ -4,21 +4,19 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class DataFile {
-    private final Path filePath;
-    public String textInFile;
     public String textUpperCase;
-        public DataFile(String filePath){
-            this.filePath = Path.of(filePath);
-        }
-        public void read(){
+        public DataFile(){};
+        public String read(String filePath){
+        String textInFile = "";
             try {
-                this.textInFile = Files.readString(this.filePath);
+                textInFile = Files.readString(Path.of(filePath));
             }catch (IOException e){
                 e.printStackTrace();
             }
+            return textInFile;
         }
-        public String getTextUpperCase(){
-            this.textUpperCase = this.textInFile.toUpperCase();
-            return this.textUpperCase;
+        public String getTextUpperCase(String textInFile){
+            textUpperCase = textInFile.toUpperCase();
+            return textUpperCase;
         }
 }
