@@ -18,6 +18,5 @@ public class DataFile {
     }
     public boolean isWordInFile(CharSequence wordToFind, String textInFile) {
         return textInFile.contains(wordToFind);
-
     }
 }
