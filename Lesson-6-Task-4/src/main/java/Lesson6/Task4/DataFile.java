@@ -16,9 +16,8 @@ public class DataFile {
         }
         return textInFile;
     }
-    public void getWord(CharSequence wordToFind, String textInFile) {
-        boolean isWordInFile = textInFile.contains(wordToFind);
-        System.out.println("'" + wordToFind + "' text "
-                + (isWordInFile ? "is in file" : "is not in file: "));
+    public boolean isWordInFile(CharSequence wordToFind, String textInFile) {
+        return textInFile.contains(wordToFind);
+
     }
 }
