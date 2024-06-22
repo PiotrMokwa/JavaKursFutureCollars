@@ -31,7 +31,7 @@ public class MathematicsOperationsTest {
 
     @ParameterizedTest(name = "Is Digit sum of number {0} equal {1} ")
     @DisplayName("Is Digit sum of number correct?")
-    @CsvSource(value = {"123:6", "-66:0"}, delimiter = ':')
+    @CsvSource(value = {"123:6", "-66:0", "+66:12"}, delimiter = ':')
     public void shouldDigitSumOfNumber(String number, int sum) {
         //given
         MathematicsOperations operatoins = new MathematicsOperations();

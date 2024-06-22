@@ -9,7 +9,7 @@ public class MathematicsOperations {
         int sum = 0;
         char minusOrPlusHolder = 0;
         for (char singleChar : numbersInCharArray) {
-            if (singleChar == '-') {
+            if (singleChar == '-' || singleChar == '+') {
                 minusOrPlusHolder = singleChar;
             } else {
                 if (minusOrPlusHolder != 0) {
