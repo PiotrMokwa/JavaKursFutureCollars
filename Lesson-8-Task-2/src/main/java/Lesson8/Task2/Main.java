@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 public class Main {
     public static void main(String[] args) {
-        List<Integer> numberList = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5, 6));
+        List<Integer> numberList = new ArrayList<>(Arrays.asList(1, 200, 3, 4, 5, 6));
         PeterList peterList = new PeterList(numberList);
                 System.out.println("Base " + peterList);
                 System.out.println("List size " + peterList.size());
@@ -14,22 +14,25 @@ public class Main {
                 System.out.println("List with added " + addedElementToEnd
                         + " element to the end: " + peterList);
             int returnIndex = 5;
-                System.out.println("List with returned " + returnIndex
+                System.out.println("Returned " + returnIndex
                         + "-th element: " + peterList.get(returnIndex));
             int addedElement = 750;
             int addedIndex = 2;
             int removedIndex = 1;
+            Integer removedElement = null;
                 try {
                     peterList.add(addedIndex, addedElement);
-                    peterList.remove(removedIndex);
+                    System.out.println("List with added " + addedElement
+                            + " element on " + addedIndex
+                            + " index: " + peterList);
+                   removedElement = peterList.remove(removedIndex);
                 } catch (ArrayIndexOutOfBoundsException exception) {
                     System.out.println("Wrong index!");
                     System.out.println(Arrays.toString(exception.getStackTrace()));
                 }
-                System.out.println("List with added " + addedElement
-                            + " element on " + addedIndex
-                            + " index: " + peterList);
-                System.out.println("List with removed index number " + removedIndex + " : " + peterList);
+
+                System.out.println("List without removed element \"" + removedElement + "\" on index number " + removedIndex + " : " + peterList);
+
     }
 }
 
