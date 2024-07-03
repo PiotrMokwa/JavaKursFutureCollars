@@ -1,6 +1,6 @@
 package Lesson8.Task3;
 public class TwoWayList {
-    Node list;
+   private Node list;
     public TwoWayList(int listLength) {
         Node nodeHead = new Node();
         Node beforeNodeHolder = new Node();
