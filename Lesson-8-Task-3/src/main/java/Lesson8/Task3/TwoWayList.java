@@ -84,7 +84,7 @@ public class TwoWayList {
             }
     }
     public void remowe(int index) throws IndexOutOfBoundsException {
-        boolean isNotIndex = isNotIndex = (size() < index + 1) || (index < 0);
+        boolean isNotIndex  = (size() < index + 1) || (index < 0);
             if (isNotIndex) {
                 throw new IndexOutOfBoundsException(index + " No index");
             }
