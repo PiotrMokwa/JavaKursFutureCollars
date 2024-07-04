@@ -5,12 +5,12 @@ public class Main {
         List<Person> friendsList = getPersonList();
         Comparator<Person> comparatorHeight = new Comparator<Person>() {
             public int compare(Person f1, Person f2) {
-                return Double.compare(f1.height, f2.height);
+                return Double.compare(f1.getHeight(), f2.getHeight());
             }
         };
         Comparator<Person> comparatorWeight = new Comparator<Person>() {
             public int compare(Person f1, Person f2) {
-                return Double.compare(f2.weight, f1.weight);
+                return Double.compare(f2.getWeight(), f1.getWeight());
             }
         };
         Comparator<Person> comparatorYears = new Comparator<Person>() {
@@ -18,25 +18,21 @@ public class Main {
                 return Double.compare(f1.getYears(), f2.getYears());
             }
         };
-
         friendsList.sort(comparatorHeight);
-        for (Person person : friendsList) {
-            System.out.println("My name is " + person.firstName + ". I' am " + person.height + " m tall.");
-        }
+            for (Person person : friendsList) {
+                System.out.println("My name is " + person.getFirstName() + ". I' am " + person.getHeight() + " m tall.");
+            }
         System.out.println();
-
         friendsList.sort(comparatorWeight);
-        for (Person person : friendsList) {
-            System.out.println("My name is " + person.firstName + ". My weight is " + person.weight);
-        }
+            for (Person person : friendsList) {
+                System.out.println("My name is " + person.getFirstName() + ". My weight is " + person.getWeight());
+            }
         System.out.println();
-
         friendsList.sort(comparatorYears);
-        for (Person person : friendsList) {
-            System.out.println("My name is " + person.firstName + ". I'am " + person.getYears() + " years old.");
-        }
+            for (Person person : friendsList) {
+                System.out.println("My name is " + person.getFirstName() + ". I'am " + person.getYears() + " years old.");
+            }
     }
-
     private static List<Person> getPersonList() {
         Person Peter = new Person("Peter", "Kowalski", 1990, 185.3, 60);
         Person James = new Person("James", "Smith", 2000, 170, 70);
@@ -51,6 +47,4 @@ public class Main {
         friendsList.add(Barbara);
         return friendsList;
     }
-
-
 }
