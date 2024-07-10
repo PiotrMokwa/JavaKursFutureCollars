@@ -12,9 +12,7 @@ public class PeterQueue implements OwnQueue {
             int newQueueSize = queue.length + 1;
             int newQueueLastIndex = newQueueSize - 1;
             Integer[] newQueue = new Integer[newQueueSize];
-            for (int counter = 0; counter < this.queue.length; counter++) {
-                newQueue[counter] = this.queue[counter];
-            }
+            System.arraycopy(this.queue, 0, newQueue, 0, this.queue.length);
             newQueue[newQueueLastIndex] = e;
             this.queue = newQueue;
             boolean isNewElementAdded = Objects.equals(this.queue[newQueueLastIndex], e);
@@ -25,9 +23,7 @@ public class PeterQueue implements OwnQueue {
             Integer firstElement = this.queue[0];
             int newQueueSize = queue.length - 1;
             Integer[] newQueue = new Integer[newQueueSize];
-            for (int counter = 1; counter < this.queue.length; counter++) {
-                newQueue[counter - 1] = this.queue[counter];
-            }
+            System.arraycopy(this.queue, 1, newQueue, 0, this.queue.length - 1);
             this.queue = newQueue;
             return firstElement;
         }
