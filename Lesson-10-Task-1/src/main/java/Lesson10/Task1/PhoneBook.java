@@ -10,12 +10,14 @@ public class PhoneBook implements OwnPhoneBook {
             assignDataToList(getDataFromFile());
         }
         @Override
-        public Person getPersonData(String fullName) throws Exception{
-            if (this.phoneList.get(fullName) != null) {
-                return this.phoneList.get(fullName);
-            } else {
-                throw new Exception(fullName + " Wasn't found!!!");
-            }
+        public Person getPersonData(String fullName) throws NoSuchElementException{
+            Optional<Person> personName = Optional.of(this.phoneList.get(fullName));
+         return  personName.get();
+//            if (this.phoneList.get(fullName) != null) {
+//                return this.phoneList.get(fullName);
+//            } else {
+//                throw new Exception(fullName + " Wasn't found!!!");
+//            }
         }
         @Override
         public String getDataFromFile() {
