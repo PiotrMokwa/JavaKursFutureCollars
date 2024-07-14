@@ -13,11 +13,6 @@ public class PhoneBook implements OwnPhoneBook {
         public Person getPersonData(String fullName) throws NoSuchElementException{
             Optional<Person> personName = Optional.of(this.phoneList.get(fullName));
          return  personName.get();
-//            if (this.phoneList.get(fullName) != null) {
-//                return this.phoneList.get(fullName);
-//            } else {
-//                throw new Exception(fullName + " Wasn't found!!!");
-//            }
         }
         @Override
         public String getDataFromFile() {
@@ -26,7 +21,7 @@ public class PhoneBook implements OwnPhoneBook {
                     data = Files.readString(Path.of("PhoneBookData.txt"));
 
                 } catch (IOException exception) {
-                    exception.printStackTrace();
+                    System.out.println(exception.getClass().getSimpleName());
                 }
             return data;
         }
