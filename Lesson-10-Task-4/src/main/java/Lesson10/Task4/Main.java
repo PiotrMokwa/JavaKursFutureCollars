@@ -4,9 +4,8 @@ import java.util.regex.Pattern;
 public class Main {
     public static void main(String[] args) {
         String[] data = {"342", "5.34", "756", "1.234e+07", "7.234243E-02", "6.09", "3457", "87", "1.0001", "3", "5"};
-        String[] data1 = {"E", "2Ee", "3a", "5ee"};
         chooseIntegerNumbers(data, "\\.");
-        chooseFloatNumbers(data, "\\.", "[Ee]");
+        chooseFloatNumbers(data, "[.](?!.*[eE])");
         chooseScientificNumbers(data, "\\d+\\.\\d+[eE]");
     }
     public static void chooseIntegerNumbers(String[] data, String firstRegularExpression) {
@@ -20,17 +19,15 @@ public class Main {
                 }
             }
     }
-        public static void chooseFloatNumbers(String[] data, String firstRegularExpression, String secondRegularExpression) {
+        public static void chooseFloatNumbers(String[] data, String regularExpression) {
             System.out.println();
             System.out.print("2. Float numbers: ");
-            Pattern patternDot = Pattern.compile(firstRegularExpression);
-            Pattern patternFloat = Pattern.compile(secondRegularExpression);
+            Pattern patternFloat = Pattern.compile(regularExpression);
                 for (String text : data) {
                     Matcher matcherFloat = patternFloat.matcher(text);
-                    Matcher matcherDot = patternDot.matcher(text);
                     boolean matchedFloat = matcherFloat.find();
-                    boolean matchedDot = matcherDot.find();
-                        if (!matchedFloat & matchedDot) {
+
+                        if (matchedFloat ) {
                             System.out.print(text + ", ");
                         }
                 }
