@@ -14,7 +14,7 @@ public class Main {
         startServer();
         startClient(textToSend);
     }catch (Exception exception){
-        exception.getLocalizedMessage();
+        exception.printStackTrace();
         }
     }
     public static void startServer() throws IOException {
