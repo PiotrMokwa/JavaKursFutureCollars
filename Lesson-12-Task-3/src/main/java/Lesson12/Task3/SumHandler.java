@@ -18,7 +18,7 @@ public class SumHandler implements HttpHandler {
         outputStream.close();
     }
     private static int sum(byte[] numbersRead) {
-        int numberConverted = 0;
+        int numberConverted;
         int sum = 0;
         for (byte number : numbersRead) {
             numberConverted = number;
