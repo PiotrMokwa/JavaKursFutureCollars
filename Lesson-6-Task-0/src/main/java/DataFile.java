@@ -8,15 +8,13 @@ public class DataFile {
         public DataFile(String filePath) throws IOException {
             this.filePath = Paths.get(filePath);
         }
-        public void getNewFile() {
+        public void writeToFile(String textToWrite) throws IOException {
             try
             {
                 Files.createFile(this.filePath);
             } catch(IOException e) {
                 e.printStackTrace();
             }
-        }
-        public void writeToFile(String textToWrite) throws IOException {
             String[] text = textToWrite.split("-");
                 for(String singleWord : text) {
                     try {
